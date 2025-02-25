@@ -3,7 +3,7 @@ export default function Home() {
     <div className="flex-1">
       {Array.from({ length: 30 }).map((_, index) => (
         <h1 key={index} className="text-4xl font-bold">
-          Hello, world!
+          Hello, Jedlik!
         </h1>
       ))}
     </div>

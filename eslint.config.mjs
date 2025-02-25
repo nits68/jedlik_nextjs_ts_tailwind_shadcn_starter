@@ -21,6 +21,14 @@ const eslintConfig = [
     plugins: {
       prettier,
     },
+    "import/resolver": {
+      alias: {
+        map: [
+          ["@", "./"],
+        ],
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
+      },
+    },
     rules: {
       "prettier/prettier": "error",
       camelcase: "off",
