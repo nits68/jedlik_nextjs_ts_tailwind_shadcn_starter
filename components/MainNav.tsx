@@ -26,16 +26,21 @@ const mainNavItems = [
 export default function MainNav() {
   const currentRoute = usePathname();
   return (
-    <div className="p-2 hidden gap-2 md:flex bg-amber-400">
-      {mainNavItems.map((item, index) => (
-        <Link
-          href={item.route}
-          key={index}
-          className={buttonVariants({ variant: currentRoute == item.route ? "default" : "secondary" })}
-        >
-          {item.title}
-        </Link>
-      ))}
+    <div className="grid grid-cols-2">
+      <div className="p-2 hidden gap-2 md:flex justify-start bg-amber-400">
+        {mainNavItems.map((item, index) => (
+          <Link
+            href={item.route}
+            key={index}
+            className={buttonVariants({ variant: currentRoute == item.route ? "default" : "secondary" })}
+          >
+            {item.title}
+          </Link>
+        ))}
+      </div>
+      <div className="p-2 hidden gap-2 md:flex justify-end bg-amber-400">
+        <Button variant="default">Hello, world!</Button>
+      </div>
     </div>
   );
 }
